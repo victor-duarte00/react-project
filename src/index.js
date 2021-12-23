@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Users from './containers/Users';
+import Home from './containers/Home';
 import GlobalStyle from './globalStyle';
 
 
 ReactDOM.render(
   <>
-  <App /> <GlobalStyle />
+  <Users /> 
+  <GlobalStyle />
   </>,
   document.getElementById('root')
 );
