@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Users from './containers/Users';
-import Home from './containers/Home';
-import GlobalStyle from './globalStyle';
+
+import GlobalStyle from './styles/globalStyle';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+import MainRoutes from './routes'
 
 
 ReactDOM.render(
   <>
-  <Users /> 
-  <GlobalStyle />
+    <Router>
+      <MainRoutes />
+    </Router>
+    <GlobalStyle />
   </>,
   document.getElementById('root')
 );

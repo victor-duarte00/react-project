@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import axios from "axios";
 
-import { Container, Image, ContainerItens, H1, InputLabel, Input, Button, User } from "./styles";
+import { Container, Image, ContainerItens, H1, Button, User } from "./styles";
 import Avatar from '../../assets/avatar.svg'
 import Arrow from '../../assets/arrow.svg'
 import Trash from '../../assets/trash.svg'
@@ -10,18 +10,6 @@ import Trash from '../../assets/trash.svg'
 
 function Users() {
   const [users, setUsers] = useState([]);
-  const inputName = useRef()
-  const inputAge = useRef()
-
-
-  async function addNewUser() {
-
-    const {data: newUser} = await axios.post("http://localhost:3001/users", 
-    { name: inputName.current.value, 
-    age: inputAge.current.value });
-
-    setUsers([...users, newUser])
-  }
 
   useEffect(() => {
     async function fetchUsers() {
@@ -55,7 +43,7 @@ function Users() {
             </User>
           ))}
         </ul>
-        <Button onClick={addNewUser}>
+        <Button >
           <img alt="seta" src={Arrow} /> Voltar
         </Button>
       </ContainerItens>

@@ -17,6 +17,7 @@ export const Image = styled.img`
 `;
 
 export const ContainerItens = styled.div`
+    backdrop-filter: blur(45px);
     background: linear-gradient(
     157.44deg, 
     rgba(255, 255, 255, 0.6) 0.84%, 
@@ -50,38 +51,20 @@ export const InputLabel = styled.p`
     margin-left: 25px;
 `;
 
-export const Input = styled.input`
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 14px;
-
-    width: 342px;
-    height: 58px;
-
-    border: none;
-    outline: none;
-
-    padding-left: 25px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
-    color: #FFFFFF;
-    margin-bottom: 35px;
-`;
-
 export const Button = styled.button`
-    background: rgba(0, 0, 0, 0.8);
+    background: transparent;
+    border: 1px solid #FFFFFF;
     border-radius: 14px;
-    border: none;
     width: 342px;
     height: 74px; 
-    margin-top: 135px;
+    margin-top: 125px;
+    
     font-style: normal;
     font-weight: bold;
     font-size: 17px;
     line-height: 28px;  
     color: #FFFFFF;
+    
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -94,6 +77,10 @@ export const Button = styled.button`
 
     &:active{
         opacity: 0.5;
+    }
+
+    img{
+    transform: rotateY(180deg);
     }
 `;
 
@@ -118,6 +105,7 @@ p{
     color: #ffffff
 }
 button{
+    
     background: none;
     border: none;
     cursor: pointer;
@@ -127,5 +115,7 @@ button{
     &:active{
         opacity: 0.5;
     }
+   
+
 }
 `;
